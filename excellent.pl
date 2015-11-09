@@ -4,7 +4,9 @@ my @channels  = ("cacasurtondoigt");
 sub bootstrap {
     my ($msg, $server, $target) = @_;
     if ($target->{name} eq "#ulbba3info") {
-        $server->command("MSG " . $target->{name}. " " . $msg . " excellent");
+        #$server->command("MSG " . $target->{name}. " " . $msg . " excellent");
+	$msg =~ s/infofond/infofofofofofofofofofofofofofond/;
+	$server->command("MSG " . $target->{name} . " " . $msg);
         Irssi::signal_stop();
     }
 }
